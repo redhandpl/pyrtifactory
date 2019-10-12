@@ -4,7 +4,7 @@
 | --- |
 
 ## Examples
-```
+```python
 import pyrtifactory
 
 results = pyrtifactory.artifactoryAPI(
