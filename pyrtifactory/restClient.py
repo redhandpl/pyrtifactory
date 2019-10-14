@@ -26,8 +26,6 @@ class artifactoryRestAPI():
             self._session = session
         if username and password:
             self._create_basic_session(username, password)
-        elif oauth is not None:
-            self._create_oauth_session(oauth)
 
     def _create_basic_session(self, username, password):
         self._session.auth = (username, password)
