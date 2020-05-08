@@ -2,6 +2,7 @@
 
 import sys
 
+
 class checkRuntime():
     def checkRuntimeVersion(self):
         currentVersion = sys.version_info
