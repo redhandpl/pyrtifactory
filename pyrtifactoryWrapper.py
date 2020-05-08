@@ -15,7 +15,7 @@ repositoryTypes = ["maven", "gradle", "ivy", "sbt", "helm", "cocoapods", "opkg",
 
 
 def parseArgs():
-    parser = argparse.ArgumentParser(description="Huuuge Artifactory CLI v" + VERSION,
+    parser = argparse.ArgumentParser(description="Artifactory CLI v" + VERSION,
                                      epilog="The power of ONG!",
                                      add_help=True)
     parser.add_argument("-v", "--version", action='version', version="%(prog)s " + VERSION)
@@ -119,7 +119,7 @@ if __name__ == '__main__':
 
                 print(repositories, end="\n\n")
         else:
-            print("Wrong repository class or class. Please behave.")
+            print("Wrong repository class or type. Please behave.")
             sys.exit(10)
 
         sys.exit(0)

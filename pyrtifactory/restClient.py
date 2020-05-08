@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import json
 import logging
 import requests
 from six.moves.urllib.parse import urlencode
@@ -70,6 +71,8 @@ class artifactoryRestAPI():
 
         if flags:
             url += ('&' if params else '') + '&'.join(flags or [])
+
+        data = None if not data else json.dumps(data)
 
         headers = headers or self.default_headers
         response = self._session.request(
